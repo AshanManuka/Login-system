@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +75,7 @@
 <ul>
   <li><a href="index.php">Home</a></li>
   <li><a href="signup.php">Register</a></li>
-  <li><a href="contact.asp">Contact</a></li>
+  <li><a href="contact.php">Contact</a></li>
   <li><a href="login.php">Login</a></li>
 </ul>
 

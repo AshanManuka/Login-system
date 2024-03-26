@@ -108,9 +108,25 @@
             exit();
         }
 
+        mysqli_stmt_close($stmt);
+
         $pwdHash = $fetchData["userPassword"];
+        $checkPwd = password_verify($password,$pwdHash);
+
+        if($checkPwd === true){
+            session_start();
+            $_SESSION["userId"] = $fetchData["userId"];
+            $_SESSION["userName"] = $fetchData["userName"];
+            $_SESSION["userFullName"] = $fetchData["userFullName"];
+            header("Location: ../index.php?error=LoginSuccessfully");
+        }else{
+            header("Location: ../login.php?error=IncorrectPassword");
+            exit();
+        }
         
-         mysqli_stmt_close($stmt);
+        
+
+
 
 
 
