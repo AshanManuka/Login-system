@@ -69,6 +69,14 @@
         background-color: #45a049;
         }
 
+        .error{
+            color: red;
+            border: 1px solid red;
+            padding: 12px;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
     </style>
 </head>
 <body>

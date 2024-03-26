@@ -16,6 +16,16 @@
         
         <Button type="submit" name="submit">Sign-Up</Button>
     </form>
+    
+    <?php 
+        if(isset($_GET["error"])){
+            if($_GET["error"] == "emptyInputs"){
+                echo '<div class="error">Fill all text fields...</div>';
+            }else if($_GET["error"] == "invalidEmail")
+            echo '<div class="error">Check you Email Again...</div>';
+        }
+    ?>
+
     <p>Already have an Account, <a href="login.php">Login</a></p>
     </div>
 
