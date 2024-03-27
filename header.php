@@ -47,8 +47,32 @@
         box-sizing: border-box;
         }
 
+        .bookDiv{
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 3%;
+        }
+
+        .subBookDiv{
+            width: 60%;
+            margin-left: 15%;
+            margin-top: 3%;
+        }
+
+
         button{
         width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        .bookHomeBtn{
+        width: 24%;
         background-color: #4CAF50;
         color: white;
         padding: 14px 20px;
@@ -83,8 +107,9 @@
 <ul>
   <li><a href="index.php">Home</a></li>
   <li><a href="signup.php">Register</a></li>
-  <li><a href="contact.php">Contact</a></li>
+  <li><a href="logout.php">LogOut</a></li>
   <li><a href="login.php">Login</a></li>
+  <li><a href="book.php">Books</a></li>
 </ul>
 
 <div class="container" style="margin:20px;">
