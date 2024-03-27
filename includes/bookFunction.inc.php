@@ -25,3 +25,25 @@ function saveBookDetails($conn,$bookName,$bookDescription,$bookAuthor,$userId){
     header("Location: ../book.php?error=SavedBook");
 
 }
+
+function searchBook($conn,$keyword){
+    $sql = "SELECT * FROM book WHERE bookname LIKE ?;";
+    $stmt = mysqli_stmt_init($conn);
+
+    if(!mysqli_stmt_prepare($stmt,$sql)){
+        header("Location: ../book.php?error=stmtError");
+        exit();
+    }
+
+    $keyword = '%'. $keyword .'%';
+    mysqli_stmt_bind_param($stmt, "s", $keyword);
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+    $searchResults = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    
+    mysqli_stmt_close($stmt);
+
+    return $searchResults;
+
+}

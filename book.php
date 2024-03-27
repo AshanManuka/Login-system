@@ -6,8 +6,10 @@ include_once 'header.php';
 </br>
 
 <div class="bookDiv">
+<form action="includes/book.inc.php" method="get">
 <input type="text" class="bookField" name="booksearchname" placeholder=" book name or about the book">
 <button class="bookHomeBtn" name="find">Find Book</button>
+</form>
 </div>
 
 <div class="subBookDiv">
